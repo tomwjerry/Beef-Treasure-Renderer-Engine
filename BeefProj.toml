@@ -1,0 +1,7 @@
+FileVersion = 1
+Dependencies = {corlib = "*", SDL3 = "*"}
+
+[Project]
+Name = "Treasure"
+TargetType = "BeefLib"
+StartupObject = "Treasure.Program"
