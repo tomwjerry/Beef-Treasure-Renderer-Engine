@@ -1,5 +1,5 @@
 FileVersion = 1
-Projects = {Treasure = {Path = "."}, SDL3 = {Path = "../SDL3-Beef"}}
+Projects = {Treasure = {Path = "."}, SDL3 = {Path = "../SDL3-Beef"}, Treasure-Freetype = {Path = "Freetype"}}
 
 [Workspace]
 StartupProject = "Treasure"

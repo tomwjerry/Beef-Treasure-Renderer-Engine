@@ -1,6 +1,7 @@
 namespace Treasure.Renderer;
 using SDL3;
 using System;
+using Treasure.UI;
 using Treasure.Util;
 
 struct UIUniform : IHashable
@@ -190,14 +191,14 @@ class UIRenderer
         this.PopClip();
     }
 
-    public void UITranslate3DShapes()
+    public void UITranslate3DShapes(Vector3f camera_transform)
     {
         for (int it = 0; it < this.shapes3d_count; it++)
         {
             Vector3f world_p = this.shapes3d[it].world_p;
             UIShape shape = this.shapes3d[it].shape;
 
-            Vector4f transformed_p = app.mainCamera.camera_transform *
+            Vector4f transformed_p = camera_transform *
                 Vector4f(world_p.X, world_p.Y, world_p.Z, 1.0f);
             Vector4f divided_p = Vector4f(transformed_p.X, transformed_p.Y, transformed_p.Z, 0.0f) / transformed_p.W;
             Vector2f flipped_p = Vector2f(divided_p.X, -divided_p.Y);

@@ -1,0 +1,7 @@
+FileVersion = 1
+Dependencies = {corlib = "*", SDL3 = "*", Treasure = "*"}
+
+[Project]
+Name = "Treasure-Freetype"
+TargetType = "BeefLib"
+StartupObject = "Treasure_Freetype.Program"
